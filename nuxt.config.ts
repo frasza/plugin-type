@@ -1,25 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  app: {
-    head: {
-      htmlAttrs: {
-        lang: 'en',
-      },
-      bodyAttrs: {
-        class: 'h-full min-h-screen',
-      },
-      title: 'Retentional',
-      charset: 'utf-8',
-      script: [
-        {
-          src: 'https://accounts.google.com/gsi/client',
-          async: true,
-          defer: true,
-        },
-      ],
-    },
-  },
-
   modules: [
     '@nuxt/fonts',
     '@nuxtjs/i18n',
@@ -54,10 +34,6 @@ export default defineNuxtConfig({
     locales: ['en'],
     defaultLocale: 'en',
     strategy: 'no_prefix',
-  },
-
-  tailwindcss: {
-    cssPath: '@/assets/main.css',
   },
 
   components: [{ path: '~/components/', pathPrefix: false }],
@@ -95,22 +71,6 @@ export default defineNuxtConfig({
   hooks: {
     'prerender:routes': function ({ routes }) {
       routes.clear()
-    },
-  },
-
-  runtimeConfig: {
-    public: {
-      environment: '',
-      apiBaseUrl: '',
-      apiClientID: '',
-      apiClientSecret: '',
-      recaptchaKey: '',
-      googleClientId: '',
-      sentryDsn: '',
-      sentryOrg: '',
-      sentryProjectId: '',
-      posthogPublicKey: '',
-      posthogHost: '',
     },
   },
 

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { $http } = useNuxtApp()
+const { $http } = useNuxtApp() // unknown type
 </script>
 
 <template>
