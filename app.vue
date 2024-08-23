@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { $http } = useNuxtApp() // unknown type
+const { $http } = useNuxtApp() // unknown type if i18n in modules array
 </script>
 
 <template>
